@@ -1,4 +1,4 @@
-# Crónica — Maqueta funcional
+# Bacatá Tech — Maqueta funcional
 
 Plataforma web de noticias y experiencias. Primera entrega: maquetación
 con las funcionalidades interactivas ya operativas en JavaScript.

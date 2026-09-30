@@ -1,5 +1,5 @@
 /* ============================================================
-   Crónica — Lógica de la aplicación
+   Bacatá Tech — Lógica de la aplicación
    ------------------------------------------------------------
    Capas:
    0. Datos           → noticias.json, solicitado con fetch() al iniciar
