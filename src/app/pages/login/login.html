@@ -1,0 +1,29 @@
+<div class="wrap auth-wrap">
+  <div class="form-card">
+    <h2>Iniciar sesión</h2>
+    <p class="sub">Accede para crear y eliminar publicaciones del catálogo.</p>
+
+    <div class="confirm-box is-error" [style.display]="fallo() ? 'flex' : 'none'">
+      <div class="ico">!</div>
+      <div><p>Usuario o contraseña incorrectos. Usa las credenciales de demostración indicadas abajo.</p></div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="entrar()" novalidate>
+      <div class="field">
+        <label for="usuario">Usuario <span class="req">*</span></label>
+        <input type="text" id="usuario" formControlName="usuario" placeholder="editor" autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="clave">Contraseña <span class="req">*</span></label>
+        <input type="password" id="clave" formControlName="clave" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+
+    <div class="demo-note">
+      <strong>Credenciales de demostración</strong>
+      <span>Usuario: <code>editor</code> · Contraseña: <code>cronica2026</code></span>
+      <span>La sesión se guarda con sessionStorage y se cierra al salir del navegador.</span>
+    </div>
+  </div>
+</div>

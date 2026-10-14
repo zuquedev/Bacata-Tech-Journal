@@ -1,0 +1,75 @@
+<div class="wrap listado-head">
+  <h1>Administrar noticias</h1>
+  <p>Crea nuevas publicaciones o elimina las existentes. Los cambios se guardan en tu navegador con localStorage.</p>
+</div>
+
+<div class="wrap admin-wrap">
+  <div class="form-card">
+    <h2>Crear publicación</h2>
+    <p class="sub">Los campos marcados con <span class="req">*</span> son obligatorios.</p>
+
+    <div class="confirm-box" [class.is-error]="aviso()?.tipo === 'error'" [style.display]="aviso() ? 'flex' : 'none'">
+      <div class="ico">{{ aviso()?.tipo === 'error' ? '!' : '✓' }}</div>
+      <div><p>{{ aviso()?.texto }}</p></div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="publicar()" novalidate>
+      <div class="field">
+        <label for="titulo">Título <span class="req">*</span></label>
+        <input type="text" id="titulo" formControlName="titulo" placeholder="Titular de la publicación">
+      </div>
+      <div class="row-2">
+        <div class="field">
+          <label for="categoria">Categoría <span class="req">*</span></label>
+          <select id="categoria" formControlName="categoria">
+            @for (c of categorias; track c) {
+              <option [value]="c">{{ c }}</option>
+            }
+          </select>
+        </div>
+        <div class="field">
+          <label for="ubicacion">Ubicación</label>
+          <input type="text" id="ubicacion" formControlName="ubicacion" placeholder="Ciudad, país">
+        </div>
+      </div>
+      <div class="field">
+        <label for="imagen">Imagen</label>
+        <select id="imagen" formControlName="imagen">
+          @for (img of imagenes; track img.valor) {
+            <option [value]="img.valor">{{ img.etiqueta }}</option>
+          }
+        </select>
+      </div>
+      <div class="field">
+        <label for="descripcion">Descripción breve <span class="req">*</span></label>
+        <textarea id="descripcion" formControlName="descripcion" placeholder="Resumen que aparece en la tarjeta (mínimo 20 caracteres)"></textarea>
+      </div>
+      <div class="field">
+        <label for="contenido">Contenido completo <span class="req">*</span></label>
+        <textarea id="contenido" formControlName="contenido" style="min-height: 150px" placeholder="Texto que aparece en la vista de detalle"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Publicar noticia</button>
+    </form>
+  </div>
+
+  <div class="admin-side">
+    <div class="side-box">
+      <h4>Catálogo actual</h4>
+      <p>Elimina cualquier publicación, propia o del catálogo base.</p>
+      <table class="admin-table"><tbody>
+        <tr><th>Título</th><th>Categoría</th><th>Fecha</th><th>Origen</th><th>Acción</th></tr>
+        @for (n of catalogo.lista(); track n.id) {
+          <tr>
+            <td><a [routerLink]="['/noticia', n.id]">{{ n.titulo }}</a></td>
+            <td>{{ n.categoria }}</td>
+            <td>{{ n.fecha }}</td>
+            <td>{{ n.propia ? 'Creada por ti' : 'Catálogo base' }}</td>
+            <td><button class="btn-mini" (click)="eliminar(n)">Eliminar</button></td>
+          </tr>
+        }
+      </tbody></table>
+      <button class="btn btn-outline" style="margin-top: 20px" (click)="restaurar()">Restaurar catálogo original</button>
+    </div>
+  </div>
+</div>
+<div style="height: 40px"></div>

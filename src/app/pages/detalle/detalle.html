@@ -1,0 +1,61 @@
+<div class="wrap">
+  @if (catalogo.cargando()) {
+    <p class="results-note">Cargando publicación…</p>
+  } @else if (noticia(); as n) {
+    <div class="breadcrumb">
+      <a routerLink="/">Inicio</a> /
+      <a routerLink="/listado">{{ n.categoria }}</a> / {{ n.titulo }}
+    </div>
+    <div class="detail">
+      <div class="detail-head">
+        <div class="detail-cat">{{ n.categoria | uppercase }}</div>
+        <h1>{{ n.titulo }}</h1>
+        <p class="detail-lede">{{ n.descripcion }}</p>
+        <div class="detail-meta">
+          <span>Publicado el {{ n.fecha }}</span>
+          <span>Categoría: {{ n.categoria }}</span>
+          <span>Ubicación: {{ n.ubicacion }}</span>
+          <span>Por {{ n.autor }}</span>
+        </div>
+      </div>
+      <div class="detail-media"><img [src]="n.imagen" [alt]="n.titulo"></div>
+      <div class="detail-layout">
+        <div class="detail-body">
+          @for (p of parrafos(); track $index) {
+            <p>{{ p }}</p>
+          }
+        </div>
+        <aside class="detail-sidebar">
+          <div class="side-box">
+            <h4>¿Te interesa esta publicación?</h4>
+            <p>Guárdala en tus favoritos o escríbenos para saber más.</p>
+            <button class="btn btn-gold" (click)="favoritos.alternar(n.id)">
+              {{ favoritos.es(n.id) ? '♥ Quitar de favoritos' : '♡ Agregar a favoritos' }}
+            </button>
+            <a routerLink="/contacto" class="btn btn-outline">Contactar</a>
+            @if (auth.activa()) {
+              <button class="btn btn-danger" (click)="eliminar()">Eliminar publicación</button>
+            }
+          </div>
+          @if (relacionadas().length) {
+            <div class="side-box">
+              <h4>Publicaciones relacionadas</h4>
+              @for (r of relacionadas(); track r.id) {
+                <a class="related-mini" [routerLink]="['/noticia', r.id]">
+                  <div class="thumb"><img [src]="r.imagen" alt=""></div>
+                  <div><h5>{{ r.titulo }}</h5><span>{{ r.categoria }}</span></div>
+                </a>
+              }
+            </div>
+          }
+        </aside>
+      </div>
+    </div>
+  } @else {
+    <div class="empty">
+      <h3>Publicación no disponible</h3>
+      <p>La noticia que buscas no existe o fue eliminada del catálogo.</p>
+      <a routerLink="/listado" class="btn btn-primary">Volver al listado</a>
+    </div>
+  }
+</div>

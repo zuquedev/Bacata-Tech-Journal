@@ -1,0 +1,15 @@
+<div class="wrap listado-head">
+  <h1>Mis favoritos</h1>
+  <p>Esta lista se guarda en tu navegador con localStorage, así que se conserva aunque cierres la pestaña o apagues el equipo.</p>
+  <div class="fav-bar">
+    <span class="results-note">{{ resumen() }}</span>
+    @if (favoritos.total() > 0) {
+      <button class="btn btn-outline" (click)="vaciar()">Vaciar lista</button>
+    }
+  </div>
+</div>
+
+<div class="wrap">
+  <app-grid-noticias [noticias]="favoritos.noticias()" [vacio]="vacio" />
+  <div style="height: 56px"></div>
+</div>

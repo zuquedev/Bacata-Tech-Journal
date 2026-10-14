@@ -1,0 +1,42 @@
+<div class="topbar">
+  <div class="wrap">
+    <span class="date">{{ fecha }}</span>
+    <span class="topbar-links">
+      @if (auth.activa()) {
+        <span>Sesión: <strong>{{ auth.usuario() }}</strong></span>
+        <a routerLink="/admin">Administrar</a>
+        <a href="#" (click)="salir($event)">Cerrar sesión</a>
+      } @else {
+        <a routerLink="/login">Iniciar sesión</a>
+        <a routerLink="/login">Crear cuenta</a>
+      }
+    </span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand"><small>PERIÓDICO DIGITAL DE TECNOLOGÍA</small>Bacatá Tech</div>
+    <div class="masthead-tag">"Donde la innovación tiene raíz"</div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+      <li><a routerLink="/listado" routerLinkActive="active">Explorar noticias</a></li>
+      <li>
+        <a routerLink="/favoritos" routerLinkActive="active">Favoritos
+          @if (favoritos.total() > 0) {
+            <span class="fav-count">{{ favoritos.total() }}</span>
+          }
+        </a>
+      </li>
+      <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+      @if (auth.activa()) {
+        <li><a routerLink="/admin" routerLinkActive="active">Administrar</a></li>
+      }
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+<div class="wrap listado-head">
+  <h1>Explorar noticias y experiencias</h1>
+  <p>Filtra por categoría o busca por palabra clave para encontrar la noticia o experiencia que más te interese.</p>
+
+  <div class="search-row">
+    <input
+      #buscar
+      type="text"
+      id="buscar"
+      placeholder="Buscar por título, descripción o lugar…"
+      (input)="termino.set(buscar.value.trim())"
+    >
+    @if (auth.activa()) {
+      <a routerLink="/admin" class="btn btn-outline">+ Nueva noticia</a>
+    }
+  </div>
+
+  <div class="filters">
+    @for (chip of chips(); track chip.nombre) {
+      <button class="chip" [class.active]="chip.nombre === categoria()" (click)="categoria.set(chip.nombre)">
+        {{ chip.nombre }} ({{ chip.cantidad }})
+      </button>
+    }
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="results-note">{{ resumen() }}</p>
+  <app-grid-noticias [noticias]="filtradas()" [vacio]="vacio" />
+  <div style="height: 56px"></div>
+</div>

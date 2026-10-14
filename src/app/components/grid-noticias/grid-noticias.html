@@ -1,0 +1,23 @@
+<div class="grid">
+  @if (catalogo.cargando()) {
+    <p class="results-note" style="grid-column: 1 / -1">Cargando noticias…</p>
+  } @else if (catalogo.error(); as mensaje) {
+    <div class="empty">
+      <h3>No pudimos cargar las noticias</h3>
+      <p>{{ mensaje }}</p>
+      <button class="btn btn-primary" (click)="catalogo.cargar()">Reintentar</button>
+    </div>
+  } @else if (!noticias().length) {
+    <div class="empty">
+      <h3>{{ vacio().titulo }}</h3>
+      <p>{{ vacio().texto }}</p>
+      @if (vacio().accion; as accion) {
+        <a [routerLink]="accion.ruta" class="btn btn-primary">{{ accion.texto }}</a>
+      }
+    </div>
+  } @else {
+    @for (n of noticias(); track n.id) {
+      <app-tarjeta [noticia]="n" />
+    }
+  }
+</div>

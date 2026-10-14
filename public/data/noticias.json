@@ -1,0 +1,110 @@
+[
+  {
+    "id": "n01",
+    "titulo": "Colombia refuerza su defensa digital tras aumento de ataques a entidades públicas",
+    "categoria": "Ciberseguridad",
+    "descripcion": "El Gobierno anunció un plan nacional de ciberseguridad con nuevos equipos de respuesta y formación para funcionarios.",
+    "contenido": "El Ministerio de las TIC presentó un plan nacional de ciberseguridad que busca proteger a más de 1.200 entidades públicas de ataques informáticos cada vez más frecuentes. La estrategia incluye la creación de equipos de respuesta rápida en cada departamento y la instalación de sistemas de monitoreo permanente.\n\nEn el frente de redes, el plan contempla la modernización de la infraestructura de conectividad estatal, con segmentación de redes críticas y protocolos más estrictos para el acceso remoto. Según el ministerio, el 60% de los incidentes reportados en 2025 se originaron por configuraciones débiles en redes internas.\n\nA nivel internacional, Colombia firmó acuerdos con España, Brasil y Corea del Sur para intercambiar alertas tempranas y capacitar equipos conjuntos. Además, se adquirió un software especializado de detección de intrusiones que será administrado por un centro único de operaciones.\n\nLas autoridades advirtieron que los ataques no solo buscan robar datos, sino también paralizar servicios esenciales como salud, energía y transporte. Por eso, el plan incluye simulacros anuales y la obligación de reportar incidentes en menos de 24 horas.",
+    "imagen": "img/card1.jpg",
+    "fecha": "2026-09-15",
+    "ubicacion": "Bogotá, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": true
+  },
+  {
+    "id": "n02",
+    "titulo": "Nueva red comunitaria de internet llega a zonas rurales de Antioquia",
+    "categoria": "Redes",
+    "descripcion": "Más de 30 veredas tendrán conexión gracias a una red mesh administrada por las propias comunidades.",
+    "contenido": "Un proyecto de conectividad rural instaló una red comunitaria en 32 veredas de Antioquia que llevaban años sin acceso estable a internet. La tecnología utilizada es una red mesh, donde cada antena se conecta con las demás y distribuye la señal sin depender de un único punto central.\n\nDesde el enfoque de redes, la arquitectura permite que si una antena falla, el tráfico se redirija automáticamente por otras rutas. Esto es clave en zonas de montaña donde los cortes de energía y los derrumbes son frecuentes. Los técnicos locales fueron capacitados para hacer mantenimiento básico sin esperar ayuda externa.\n\nEn materia de ciberseguridad, la red cuenta con autenticación por dispositivo y cifrado del tráfico, para evitar que terceros se conecten sin permiso o intercepten comunicaciones. Los administradores comunitarios reciben formación periódica sobre contraseñas seguras y detección de intentos de intrusión.\n\nEl software de gestión fue desarrollado a la medida y permite monitorear el estado de cada nodo desde un celular. La meta es replicar el modelo en Chocó y Cauca durante el próximo año.",
+    "imagen": "img/card2.jpg",
+    "fecha": "2026-09-15",
+    "ubicacion": "Medellín, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": true
+  },
+  {
+    "id": "n03",
+    "titulo": "Ataque de ransomware afecta a varias clínicas en el Eje Cafetero",
+    "categoria": "Internacional",
+    "descripcion": "Los sistemas fueron bloqueados durante horas y obligaron a suspender citas médicas programadas.",
+    "contenido": "Un ataque de ransomware afectó a por lo menos siete clínicas en el Eje Cafetero y dejó fuera de servicio sus sistemas de historia clínica durante varias horas. Los atacantes cifraron archivos y exigieron un pago en criptomonedas para liberarlos.\n\nEn el plano de redes, los investigadores detectaron que el ingreso inicial ocurrió por una red Wi-Fi mal segmentada que conectaba equipos médicos con la red administrativa. Esa falta de separación permitió que el malware se propagara rápidamente entre sedes.\n\nDesde la ciberseguridad, expertos recomendaron aislar los equipos afectados, restaurar respaldos y no pagar el rescate. Las clínicas activaron protocolos de contingencia con registros en papel y reprogramaron las citas no urgentes.\n\nEl caso también tuvo eco internacional porque la variante del ransomware ya había sido reportada en hospitales de Argentina y México. Las autoridades colombianas investigan si se trata del mismo grupo criminal.",
+    "imagen": "img/card3.jpg",
+    "fecha": "2026-09-14",
+    "ubicacion": "Quindío, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": true
+  },
+  {
+    "id": "n04",
+    "titulo": "Startup bogotana exporta software de logística a cuatro países de la región",
+    "categoria": "Software",
+    "descripcion": "La empresa firmó contratos en México, Perú, Chile y Ecuador para optimizar rutas de transporte de carga.",
+    "contenido": "Una startup bogotana especializada en software logístico cerró acuerdos para operar en México, Perú, Chile y Ecuador, luego de consolidarse en el mercado colombiano. Su plataforma permite planear rutas, monitorear vehículos en tiempo real y reducir costos de combustible.\n\nDesde el punto de vista internacional, la expansión obligó a la empresa a adaptar su producto a normativas locales de transporte y a integrarse con sistemas aduaneros de cada país. También abrieron oficinas comerciales en Ciudad de México y Lima para atender a los clientes directamente.\n\nEn el ámbito de redes, la plataforma opera sobre una infraestructura en la nube con redundancia en tres regiones, lo que garantiza disponibilidad incluso si una zona falla. La comunicación entre sensores y servidores viaja cifrada de extremo a extremo.\n\nLa compañía planea invertir en ciberseguridad certificada y en un módulo de inteligencia artificial para predecir retrasos. Según sus fundadores, el objetivo es triplicar ingresos en dos años y llegar a Brasil en 2027.",
+    "imagen": "img/card4.jpg",
+    "fecha": "2026-09-14",
+    "ubicacion": "Cali, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": false
+  },
+  {
+    "id": "n05",
+    "titulo": "Abren inscripciones a taller gratuito de programación web",
+    "categoria": "Software",
+    "descripcion": "Jóvenes y adultos podrán aprender HTML, CSS y JavaScript en un curso virtual con cupos limitados.",
+    "contenido": "Una fundación tecnológica con sede en Bogotá abrió las inscripciones para un taller gratuito de programación web dirigido a personas sin experiencia previa. El curso enseñará los fundamentos de HTML, CSS y JavaScript, y tendrá una duración de ocho semanas con sesiones virtuales dos veces por semana.\n\nEn el componente de software, los participantes aprenderán a construir páginas web desde cero, manejar estructuras básicas de código y publicar sus proyectos en internet. También se introducirán conceptos de control de versiones con Git y buenas prácticas de organización de archivos.\n\nDesde el enfoque de redes, el taller incluirá una introducción al funcionamiento de internet, dominios, hosting y protocolos básicos como HTTP y HTTPS. Los estudiantes comprenderán cómo viaja la información entre el navegador y el servidor.\n\nEn materia de ciberseguridad, se abordarán temas como contraseñas seguras, validación de formularios y prevención de ataques comunes en sitios web. Las inscripciones estarán abiertas durante tres semanas o hasta agotar los 500 cupos disponibles.",
+    "imagen": "img/card5.jpg",
+    "fecha": "2026-09-13",
+    "ubicacion": "Bogotá, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": false
+  },
+  {
+    "id": "n06",
+    "titulo": "Startup local lanza aplicación para movilidad sostenible",
+    "categoria": "Software",
+    "descripcion": "La app conecta usuarios con rutas de transporte compartido en bicicleta y bus eléctrico.",
+    "contenido": "Una startup bogotana lanzó una aplicación móvil que conecta a los usuarios con rutas de transporte compartido en bicicleta y bus eléctrico. La herramienta permite planear trayectos, reservar cupos y pagar el viaje desde el celular, con el objetivo de reducir el uso del carro particular en trayectos cortos.\n\nEn el componente de software, la app fue desarrollada con algoritmos que calculan la mejor combinación entre bicicletas públicas, buses eléctricos y caminata. El sistema aprende de los hábitos del usuario para sugerir rutas más rápidas, económicas y con menor huella de carbono.\n\nDesde el enfoque de redes, la plataforma funciona con geolocalización en tiempo real y sincroniza la información de cada vehículo mediante red móvil. Esto permite mostrar disponibilidad actualizada de bicicletas y buses, incluso en zonas con conexión intermitente gracias a un modo offline.\n\nEn materia de ciberseguridad, la aplicación implementa autenticación en dos pasos, cifrado de datos personales y pagos tokenizados para proteger la información financiera de los usuarios. La startup espera llegar a 50.000 usuarios activos en su primer año.",
+    "imagen": "img/card6.jpg",
+    "fecha": "2026-09-12",
+    "ubicacion": "Bogotá, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": false
+  },
+  {
+    "id": "n07",
+    "titulo": "Universidad del Valle lanza laboratorio de robótica abierto a la comunidad",
+    "categoria": "Software",
+    "descripcion": "El espacio ofrecerá talleres gratuitos de programación, impresión 3D y armado de prototipos para jóvenes y adultos.",
+    "contenido": "La Universidad del Valle inauguró un laboratorio de robótica en su sede de Cali que estará abierto al público general, no solo a estudiantes matriculados. El espacio cuenta con impresoras 3D, kits de electrónica, computadores de alto rendimiento y mesas de trabajo para armar prototipos.\n\nLa programación incluye talleres gratuitos los sábados sobre programación en Python, diseño de circuitos y uso de sensores. Los interesados solo deben inscribirse en línea y asistir con sus propios insumos si desean llevarse el proyecto a casa.\n\nLos organizadores esperan recibir a más de 1.500 personas durante el primer año. Además, el laboratorio servirá como sede para competencias regionales de robótica escolar y como punto de encuentro para emprendedores que quieran validar ideas tecnológicas.",
+    "imagen": "img/card7.jpg",
+    "fecha": "2026-09-11",
+    "ubicacion": "Cali, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": false
+  },
+  {
+    "id": "n08",
+    "titulo": "Colombia tendrá su primer cable submarino de fibra óptica hacia Asia",
+    "categoria": "Redes",
+    "descripcion": "El proyecto conectará el Pacífico colombiano con Japón y promete reducir la latencia en conexiones internacionales.",
+    "contenido": "El Ministerio de las TIC confirmó que Colombia avanza en la construcción de su primer cable submarino de fibra óptica con destino a Asia, específicamente hacia Japón. La obra tendrá un punto de amarre en Buenaventura y se espera que entre en operación en 2027.\n\nLa conexión permitirá que el tráfico de internet colombiano hacia Asia no tenga que pasar por Estados Unidos, lo que reducirá la latencia y mejorará la velocidad en servicios como videollamadas, juegos en línea y plataformas de comercio electrónico. Según estimaciones oficiales, el impacto podría sentirse en sectores como logística, educación y salud digital.\n\nEl proyecto hace parte de una estrategia regional en la que también participan Chile, Perú y Ecuador. Las autoridades aseguran que la obra generará empleo local durante su construcción y que el cable tendrá capacidad para soportar el crecimiento del tráfico de datos de las próximas dos décadas.",
+    "imagen": "img/card8.jpg",
+    "fecha": "2026-09-10",
+    "ubicacion": "Buenaventura, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": false
+  },
+  {
+    "id": "n09",
+    "titulo": "Nueva plataforma conecta a campesinos colombianos con compradores urbanos",
+    "categoria": "Software",
+    "descripcion": "La herramienta permite vender cosechas directamente, sin intermediarios, y coordinar entregas en ciudades principales.",
+    "contenido": "Un grupo de ingenieros y agrónomos lanzó una plataforma digital que conecta a pequeños productores rurales con compradores en Bogotá, Medellín, Cali y Barranquilla. Los campesinos pueden publicar su cosecha, fijar el precio y acordar la entrega sin necesidad de intermediarios.\n\nLa aplicación ofrece además información sobre precios de referencia en mercados mayoristas, recomendaciones de empaque y rutas logísticas para reducir costos de transporte. En los primeros tres meses de operación, más de 800 productores se registraron y se movilizaron cerca de 60 toneladas de alimentos.\n\nLos creadores explican que el modelo busca mejorar los ingresos del campo y acercar a los consumidores a productos frescos. Para finales de año esperan integrar pagos digitales y abrir una sección de suscripciones con canastas semanales entregadas a domicilio.",
+    "imagen": "img/card9.jpg",
+    "fecha": "2026-09-09",
+    "ubicacion": "Bucaramanga, Colombia",
+    "autor": "Redacción Bacata",
+    "destacada": false
+  }
+]

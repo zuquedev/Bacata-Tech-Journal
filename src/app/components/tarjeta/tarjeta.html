@@ -1,0 +1,24 @@
+<article class="card">
+  <div class="card-media">
+    <span class="card-cat">{{ noticia().categoria | uppercase }}</span>
+    @if (noticia().propia) {
+      <span class="card-own">Tuya</span>
+    }
+    <button
+      class="fav-btn"
+      [class.is-fav]="favoritos.es(noticia().id)"
+      [attr.aria-pressed]="favoritos.es(noticia().id)"
+      title="Guardar en favoritos"
+      (click)="alternar($event)"
+    >{{ favoritos.es(noticia().id) ? '♥' : '♡' }}</button>
+    <img [src]="noticia().imagen" [alt]="noticia().titulo">
+  </div>
+  <div class="card-body">
+    <h3>{{ noticia().titulo }}</h3>
+    <p>{{ noticia().descripcion }}</p>
+    <div class="card-foot">
+      <a [routerLink]="['/noticia', noticia().id]" class="card-link">Ver más</a>
+      <span class="card-meta">{{ noticia().fecha | tiempoRelativo }}</span>
+    </div>
+  </div>
+</article>
