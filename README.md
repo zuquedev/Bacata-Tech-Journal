@@ -15,7 +15,7 @@ ng build          # genera dist/ para desplegar
 
     Usuario: editor    Contraseña: cronica2026
 
-## Equivalencias con el proyecto anterior
+## Equivalencias con la versión anterior del proyecto
 
 | Antes | Ahora |
 |---|---|
