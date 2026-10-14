@@ -11,15 +11,6 @@ ng test           # pruebas (Vitest)
 ng build          # genera dist/ para desplegar
 ```
 
-## Antes de ejecutar: copia tus recursos del proyecto anterior
-
-| Origen (proyecto viejo) | Destino (este proyecto) |
-|---|---|
-| `css/styles.css` | `src/styles.css` |
-| `img/` (hero.jpg, card1…card9.jpg) | `public/img/` |
-
-`public/data/noticias.json` ya está incluido.
-
 ## Credenciales de demostración
 
     Usuario: editor    Contraseña: cronica2026
@@ -42,9 +33,8 @@ ng build          # genera dist/ para desplegar
 | `tests/test.js` (jsdom) | `*.spec.ts` (21 pruebas) |
 | `js/data.js` + `tools/sync-datos.js` | Ya no hacen falta (ver nota) |
 
-> **Sobre `data.js`:** existía para cuando se abría el HTML con doble clic y `fetch` fallaba. Una app Angular siempre se sirve con `ng serve` o desde un servidor, así que ese respaldo ya no aplica. Si la carga del JSON falla, la grilla muestra un mensaje con botón **Reintentar**.
 
-## Almacenamiento en el navegador (sin cambios)
+## Almacenamiento en el navegador
 
 | Clave | Almacén | Contenido |
 |---|---|---|
@@ -52,5 +42,3 @@ ng build          # genera dist/ para desplegar
 | `cronica_noticias` | localStorage | Noticias creadas |
 | `cronica_borradas` | localStorage | Ids de noticias base eliminadas |
 | `cronica_sesion` | sessionStorage | Usuario autenticado |
-
-Los favoritos y las noticias que ya tenías guardadas en el navegador siguen funcionando.
